@@ -29,6 +29,10 @@ html {
   display: block;
   margin: auto;
 }
+.text_center {
+  text-align: center;
+  padding: 24px;
+}
 .multiselect {
   display: flex;
   justify-content: center;
