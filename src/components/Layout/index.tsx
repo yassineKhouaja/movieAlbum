@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,7 +6,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
+type LayoutProps = {
+  children?: JSX.Element | JSX.Element[];
+};
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -21,7 +22,7 @@ function Copyright() {
 
 const theme = createTheme();
 
-export default function Layout({ children }) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
